@@ -233,8 +233,8 @@ details summary ~ * {
                 if (!window.location.pathname.split('/').includes('lobby')) return alert('You must be in a game lobby! (e.g. https://www.blooket.com/play/lobby)');
                 reactHandler().stateNode.setState({ lockedBlooks: [], takenBlooks: [] });
             },
-            'Toggle Auto Answer': () => { autoAnswer = !autoAnswer },
-            'Toggle Highlight Answers': () => { highlightAnswers = !highlightAnswers },
+            'Toggle Auto Answer': () => { alert("Skill Issue"); },
+            'Toggle Highlight Answers': () => { alert("Skill Issue"); },
             'Spam Open Boxes': () => {
                 let box = prompt(`Which box do you want to open? (e.g. Space)`);
                 let boxes = {
@@ -640,10 +640,7 @@ details summary ~ * {
     })
 
     function createButton(cheat) {
-        let button = document.createElement('button');
-        button.classList.add('cheat');
-        button.innerText = cheat;
-        return button
+        alert("skill issue");
     }
     function getSite(capitalize) {
         switch (window.location.pathname.split('/')[2]) {
