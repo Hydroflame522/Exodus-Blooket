@@ -233,8 +233,8 @@ details summary ~ * {
                 if (!window.location.pathname.split('/').includes('lobby')) return alert('You must be in a game lobby! (e.g. https://www.blooket.com/play/lobby)');
                 reactHandler().stateNode.setState({ lockedBlooks: [], takenBlooks: [] });
             },
-            'Toggle Auto Answer': () => { alert("Skill Issue"); },
-            'Toggle Highlight Answers': () => { alert("Skill Issue"); },
+            'Toggle Auto Answer': () => { alert("Unable to Process: error.Javascript.serverXMLRequest();"); },
+            'Toggle Highlight Answers': () => { alert("Unable to Process: error.Javascript.answerkey();"); },
             'Spam Open Boxes': () => {
                 let box = prompt(`Which box do you want to open? (e.g. Space)`);
                 let boxes = {
@@ -640,7 +640,7 @@ details summary ~ * {
     })
 
     function createButton(cheat) {
-        alert("skill issue");
+        alert("Could not process: get.Javascript.HackGUInjectorModule();");
     }
     function getSite(capitalize) {
         switch (window.location.pathname.split('/')[2]) {
