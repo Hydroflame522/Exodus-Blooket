@@ -1,20 +1,18 @@
 // ==UserScript==
-// @name         BK-Client
+// @name         New Userscript
 // @namespace    http://tampermonkey.net/
-// @version      1.0.1
-// @description  Automated AI and hack client for blooket
-// @author       Hydroflame521
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
 // @match        *://*.blooket.com/*
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=blooket.com
+// @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==
 
 (function() {
-  
-  let certificate = "registered under hydroflame521 for Tampermonkey (latest)";
-  
     'use strict';
-(() => {
+
+    (() => {
     let n = document.createElement('iframe');
     document.body.append(n);
     window.alert = n.contentWindow.alert.bind(window);
@@ -99,7 +97,7 @@ details summary ~ * {
     header.style.paddingTop = '2px';
     header.style.fontSize = '1.5rem';
     header.style.textAlign = 'center'
-    header.innerHTML = `Blooket Client <span style="font-size: 0.75rem">v1.0.1 PUBLIC</span>`;
+    header.innerHTML = `Blooket Cheats <span style="font-size: 0.75rem">v4.10.22</span>`;
 
     let loop;
 
@@ -166,7 +164,7 @@ details summary ~ * {
     bodyDiv.appendChild(footer);
     footer.style.fontSize = '0.9rem';
     footer.style.paddingBottom = '5px';
-    footer.innerHTML = (`<span>Hydroflame521</span>`);
+    footer.innerHTML = (`<span>GUI by OneMinesraft2#5394<br>Cheats by <a style="color: lightblue" href="https://twitter.com/glizuwu">gliz</a></span>`);
 
     var getValues = () => new Promise((e, t) => {
         try {
@@ -233,8 +231,8 @@ details summary ~ * {
                 if (!window.location.pathname.split('/').includes('lobby')) return alert('You must be in a game lobby! (e.g. https://www.blooket.com/play/lobby)');
                 reactHandler().stateNode.setState({ lockedBlooks: [], takenBlooks: [] });
             },
-            'Toggle Auto Answer': () => { alert("Unable to Process: error.Javascript.serverXMLRequest();"); },
-            'Toggle Highlight Answers': () => { alert("Unable to Process: error.Javascript.answerkey();"); },
+            'Toggle Auto Answer': () => { autoAnswer = !autoAnswer },
+            'Toggle Highlight Answers': () => { highlightAnswers = !highlightAnswers },
             'Spam Open Boxes': () => {
                 let box = prompt(`Which box do you want to open? (e.g. Space)`);
                 let boxes = {
@@ -640,7 +638,10 @@ details summary ~ * {
     })
 
     function createButton(cheat) {
-        alert("Could not process: get.Javascript.HackGUInjectorModule();");
+        let button = document.createElement('button');
+        button.classList.add('cheat');
+        button.innerText = cheat;
+        return button
     }
     function getSite(capitalize) {
         switch (window.location.pathname.split('/')[2]) {
