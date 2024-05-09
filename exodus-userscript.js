@@ -1,11 +1,11 @@
 // ==UserScript==
-// @name         New Userscript
+// @name         Exodus Cheats
 // @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  try to take over the world!
-// @author       You
+// @version      1.0
+// @description  Userscript Cheats for Blooket, USE AT YOUR OWN RISK
+// @author       Hydroflame521
 // @match        *://*.blooket.com/*
-// @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+// @icon         https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsoGWRa61xM_LGEp1J7kxZcDoz_9s3pqRKSCgvH11vNg&s
 // @grant        none
 // ==/UserScript==
 
