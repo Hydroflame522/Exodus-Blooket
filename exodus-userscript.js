@@ -54,6 +54,8 @@ details summary ~ * {
 .cheat:hover {
     background: hsl(0, 0%, 30%);
 }`);
+    const version = "v1.0";
+    const clientName = "Exodus";
 
     const GUI = document.createElement('div');
     GUI.appendChild(style);
@@ -97,7 +99,7 @@ details summary ~ * {
     header.style.paddingTop = '2px';
     header.style.fontSize = '1.5rem';
     header.style.textAlign = 'center'
-    header.innerHTML = `Blooket Cheats <span style="font-size: 0.75rem">v4.10.22</span>`;
+    header.innerHTML = `${clientName} <span style="font-size: 0.75rem">${version}</span>`;
 
     let loop;
 
@@ -149,7 +151,7 @@ details summary ~ * {
     bodyDiv.appendChild(body);
     GUI.appendChild(bodyDiv);
 
-    body.innerHTML = (`<span id="curPageEl">${getSite(true) ? `Current gamemode: ${getSite(true)}` : 'No game detected'}</span><br><span>(Press E to hide)</span><br>`);
+    body.innerHTML = (`<span id="curPageEl">${getSite(true) ? `Current gamemode: ${getSite(true)}` : 'No game detected'}</span><br><span>(Press X to hide)</span><br>`);
     body.style.display = 'block';
     body.style.margin = '10px';
     //body.style.background = 'white';
@@ -159,12 +161,13 @@ details summary ~ * {
     body.appendChild(activeCheats);
 
     document.body.append(GUI);
+    GUI.hidden = !GUI.hidden;
 
     let footer = document.createElement('div');
     bodyDiv.appendChild(footer);
     footer.style.fontSize = '0.9rem';
     footer.style.paddingBottom = '5px';
-    footer.innerHTML = (`<span>GUI by OneMinesraft2#5394<br>Cheats by <a style="color: lightblue" href="https://twitter.com/glizuwu">gliz</a></span>`);
+    footer.innerHTML = (`<span><a style="color: lightblue" href="https://github.com/Hydroflame522/Exodus-Blooket">GitHub</a></span>`);
 
     var getValues = () => new Promise((e, t) => {
         try {
@@ -663,7 +666,7 @@ details summary ~ * {
         };
     };
     function toggleHidden(e) {
-        e.code == 'KeyE' && (GUI.hidden = !GUI.hidden)
+        e.code == 'KeyX' && (GUI.hidden = !GUI.hidden)
     };
     addEventListener('keypress', toggleHidden);
 })()
